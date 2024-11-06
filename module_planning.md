@@ -1,11 +1,10 @@
 ## Modules
 ### essential functions
-map the filesystem?
-traverse the fileystem
-open folders
-created folders
-create files
-open files
+* traverse the fileystem
+* open folders
+* created folders
+* create files
+* open files
 ### secondary functions
 search files
 move files
