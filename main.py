@@ -5,8 +5,5 @@ def main():
     while globals.decision != 'q':
        user_choice.user_action()
 
-
-
-
 if __name__ == '__main__':
     main()

@@ -7,14 +7,10 @@
 * open files
 ### secondary functions
 search files
-move files
+* move files
 rename files
-view hidden files
-copy files
-paste files
-display
+* copy files
 ### tertiary functions
-multiple windows
 config
 view file size
 view folder size

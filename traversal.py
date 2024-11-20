@@ -1,6 +1,7 @@
 import os
 import subprocess
 import globals
+from termcolor import colored
 
 def list_dir(root_dir):
     subdirectories = []
@@ -10,12 +11,14 @@ def list_dir(root_dir):
             subdirectories.append(entry)
         elif entry.is_file():
             files.append(entry)
-    print("subdirectories:")
+    subprocess.call("clear")
+    print(colored(globals.current_path,"magenta",attrs = ["bold", "underline"]))
+    print(colored("subdirectories:", "red"))
     for each in subdirectories:
-        print(each.name)
-    print("files:")
+        print(colored(each.name, "light_red"))
+    print(colored("files:", "cyan"))
     for each in files:
-        print(each.name)
+        print(colored(each.name, "light_cyan"))
 
 '''
     for dirpath, dirnames, filenames in os.walk(root_dir):
@@ -29,9 +32,7 @@ def open_dir(selectionName):
     for entry in os.scandir(globals.current_path):
         if entry.is_dir() and entry.name == selectionName:
             selection = entry
-            list_dir(selection.path)
             globals.current_path = selection.path
-            return 0
         else:
             pass
 
